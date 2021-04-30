@@ -1,5 +1,5 @@
 # SSE
-SSE(SIRA | Standard Encryption) is a Python application made by SIRA Security Research Inc that encrypts, decrypts messages &amp; files.
+SSE(SIRA | Standard Encryption) is a Python application made by SIRA Security Research Inc that encrypts, decrypts messages & files, to communicate more privatly and securly.
 
 ![](https://raw.githubusercontent.com/SIRASec/SSE/main/sse_SIRA.png?token=AKZEDCDBAPOFKV63GHCXCY3ARRFDI)
 
