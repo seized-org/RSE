@@ -84,8 +84,8 @@ if yes_nos >= "yes": # If user types yes, it will move further...
         with open(fileencrypted, 'wb') as dec: #
             dec.write(decrypting) # Writing the decrypted strings in the file
         print(time.strftime("%d/%m/%Y"),"[+] File Decrypted With Code 0.")
-            
-else:  # If user didn't want to decrypt a file he will be send to line 74
+else:
+    print("[+] File Decryption Did Not Work, Either the Fernet Key is Not Correct or the Encrypted Message is Broken.")  # If user didn't want to decrypt a file he will be send to line 74
     print(time.strftime("%d/%m/%Y"),"[-] Exiting Program...") # Prints that the application is closing
     
     
