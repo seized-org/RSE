@@ -1,10 +1,12 @@
 from cryptography.fernet import Fernet # Using cryptography package.
 from datetime import date
 import base64
+
 time = date.today()
 startyesno = input("Would You Like to Encrypt a Message? yes/no: ")
 if startyesno >= 'yes':
     message = input("[+] Please Type the Message to Encrypt: ") # Need user intercation in order to have a msg to encrypt.
+    
     with open("SSE-DataStoring.siracrypt", "wb") as key: # Opens the data storing file
         gen_key = Fernet.generate_key()
         key.write(gen_key) # Writes the fernet key
@@ -37,13 +39,16 @@ if startyesno >= 'no':
 
     yesandno = input("[+] Would You Like to Decrypt a Message? yes/no: ")
 if yesandno >= "yes":
+    
     with open("InsertEncryptedMessagesToHereInOrderToDecryptThem.siracrypt", 'rb') as enc: # Reads file
         encryptedd = enc.read() # Will read the file once executing variable
+    
     with open("InsertKeysToHERE.siracrypt", 'rb') as keysfile:
         key = keysfile.readline()
         #key = input("[+] Type the Fernet Key to Decrypt: ") # Asks user for the fernet key that came with the encrypted file
         f = Fernet(key) # Setting a new variable for Fernet and specifying the fernet key
         decrypting = f.decrypt(encryptedd) # Decrypting file using fernet key
+        
         with open("InsertEncryptedMessagesToHereInOrderToDecryptThem.siracrypt", 'wb') as dec:
             dec.write(decrypting) # Writing the decrypted strings in the file
 
@@ -58,12 +63,15 @@ yesno = input("[+] Would You Like to Encrypt a File? yes/no: ") # User Intercati
 if yesno >= "yes": # If user types "yes" it will move further:
     key = Fernet.generate_key() # Generating a new fernet key and storing it on the short term memory
     fileencrypt = input("[+] Please Specify the Path to the File to Encrypt: ") # User intercation, if the user wanted to encrypt a file, now the user needs to specify the file path
+    
     with open("SSE-DataStoring.siracrypt", 'wb') as keyinfile: # Opening the Data file as keyinfile
         keyinfile.write(key) # Writing key inside the Data file
         f = Fernet(key) # Sets "f" as the new variable of Fernet(key)
+        
         with open(fileencrypt, "rb") as file: # Reading the file we want to encrypt
             org = file.read() # Original file is a variable of file.read()
             encrypted = f.encrypt(org) # Fernet encrypts the Original file we want to encrypt
+            
             with open(fileencrypt, "wb") as encrypted_file: # Writing original file
                 encrypted_file.write(encrypted) # Writing the new encryption so the file we encrypt is now encrypted
                 print(time.strftime("%d/%m/%Y"),"[+] Your Encrypted File is: ", fileencrypt) # Letting user know the file is encrypted
@@ -74,13 +82,16 @@ if yesno >= "no": # If the user types no we will be moving to the decryption par
     yes_nos = input("[+] Would You Like to Decrypt a File? yes/no: ") # # User intercation
 if yes_nos >= "yes": # If user types yes, it will move further...
     fileencrypted = input("[+] Please Specify the Path to the Encrypted File: ") # Asks file to decrypt
+    
     with open(fileencrypted, 'rb') as enc: # Reads file
         encryptedd = enc.read() # Will read the file once executing variable
+    
     with open("InsertKeysToHERE.siracrypt", 'rb') as keysfile: # INSERT YOUR FERNET KEY BEFORE EXECUING THE DECRYPTION PART
         key = keysfile.readline() # Reads first line of the file( the file with the key! )
         #key = input("[+] Type the Fernet Key to Decrypt: ") # Asks user for the fernet key that came with the encrypted file
         f = Fernet(key) # Setting a new variable for Fernet and specifying the fernet key
         decrypting = f.decrypt(encryptedd) # Decrypting file using fernet key
+        
         with open(fileencrypted, 'wb') as dec: #
             dec.write(decrypting) # Writing the decrypted strings in the file
         print(time.strftime("%d/%m/%Y"),"[+] File Decrypted With Code 0.")
