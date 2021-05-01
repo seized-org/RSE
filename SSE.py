@@ -2,7 +2,7 @@ from cryptography.fernet import Fernet # Using cryptography package.
 from datetime import date
 import base64
 time = date.today()
-startyesno = input("Would You Like to Encrypt a Message? yes/no: ")
+startyesno = input("[+] Would You Like to Encrypt a Message? yes/no: ")
 if startyesno >= 'yes':
     message = input("[+] Please Type the Message to Encrypt: ") # Need user intercation in order to have a msg to encrypt.
     with open("SSE-DataStoring.siracrypt", "wb") as key: # Opens the data storing file
