@@ -1,7 +1,7 @@
 # SSE
 SSE(SIRA | Standard Encryption) is a Python application made by SIRA Security Research Inc that encrypts, decrypts messages & files, to communicate more privatly and securly.
 
-![](https://raw.githubusercontent.com/SIRASec/SSE/main/sse_SIRA.png?token=AKZEDCBMX3OYHZJN3UE7PETARRIBW)
+
 
 # How to use the application
 1. Clone the repository using Git in Linux, Windows users can just click no the green download button on the repository.
