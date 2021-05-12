@@ -1,5 +1,5 @@
 # ASE
-ASE(Abrupt9 | Standard Encryption) is a Python application made by SIRA Security Research Inc that encrypts, decrypts messages & files, to communicate more privatly and securly.
+ASE(Abrupt9 | Standard Encryption) is a Python application developed by Abrupt9 Inc(formerly SIRA Security Research Inc) that encrypts, decrypts messages & files, to communicate more privatly and securly.
 
 
 
