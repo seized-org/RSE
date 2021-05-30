@@ -1,6 +1,6 @@
 from cryptography.fernet import Fernet # Using cryptography package.
 from datetime import date
-base64
+import base64
 
 time = date.today()
 startyesno = input("Would You Like to Encrypt a Message? yes/no: ")
