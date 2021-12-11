@@ -1,5 +1,5 @@
-# RSE
-RSE(Revise7 | Standard Encryption) is a Python application developed by Revise7 (formerly Abrupt9) that encrypts, decrypts your messages & files, to communicate more privatly and securly.
+# VSE
+VSE(Vultrlabs | Standard Encryption) is a Python application developed by Vultrlabs (formerly Abrupt9) that encrypts, decrypts your messages & files, to communicate more privatly and securly.
 
 
 
