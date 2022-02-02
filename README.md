@@ -1,5 +1,5 @@
 # VSE
-VSE(Vultrlabs | Standard Encryption) is a Python application developed by Vultrlabs (formerly Abrupt9) that encrypts, decrypts your messages & files, to communicate more privatly and securly.
+VSE(seized-org | Standard Encryption) is a Python application developed by seized-org (formerly "Vultrlabs") that encrypts, decrypts your messages & files, to communicate more privatly and securly.
 
 
 
